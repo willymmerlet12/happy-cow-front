@@ -24,6 +24,16 @@ const Signup = ({ setUser }) => {
     setOpen(true);
   };
 
+  const names = [
+    "Vegan",
+    "Vegetarian",
+    "Raw",
+    "Mostly Veg",
+    "Non Veg",
+    "herbivore",
+    "Fruitarian",
+  ];
+
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -132,18 +142,13 @@ const Signup = ({ setUser }) => {
                   onClose={handleClose}
                   onOpen={handleOpen}
                   value={vegan}
-                  onChange={(event) => {
-                    setVegan(event.target.value);
-                  }}
+                  onChange={handleChange}
                 >
-                  <MenuItem value="none">
-                    <em>None</em>
-                  </MenuItem>
-                  <MenuItem value={10}>Vegan</MenuItem>
-                  <MenuItem value={20}>Vegetarian</MenuItem>
-                  <MenuItem value={30}>Mid-Veg</MenuItem>
-                  <MenuItem value={40}>Herbivore</MenuItem>
-                  <MenuItem value={50}>Fruitarian</MenuItem>
+                  {names.map((veg) => (
+                    <MenuItem key={veg} value={veg}>
+                      {veg}
+                    </MenuItem>
+                  ))}
                 </Select>
               </div>
               <div className="col">
