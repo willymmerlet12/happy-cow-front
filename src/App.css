@@ -1,1 +1,272 @@
 /* Other rules */
+body {
+  font-family: "Nunito", sans-serif;
+}
+/* LOGIN */
+
+.signup-container {
+  display: flex;
+  justify-content: center;
+}
+.signup-form {
+  display: flex;
+  flex-direction: column;
+}
+h2 {
+  font-size: 25px;
+  margin-top: 20px;
+  margin-bottom: 12px;
+  color: #444444;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.input-login {
+  border-radius: 5px;
+  margin-left: 5px;
+  height: 40px;
+  width: 200px;
+  border: 3px solid lightgray;
+  margin-bottom: 30px;
+}
+.input-login:hover {
+  border-color: #9069cd;
+}
+.button-login {
+  color: white;
+  height: 40px;
+  width: 230px;
+  border-radius: 5px;
+  background-color: #9069cd;
+  border: none;
+  margin-bottom: 10px;
+}
+.but {
+  display: flex;
+  justify-content: center;
+}
+.title {
+  padding-top: 10px;
+  padding-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.title h3 {
+  margin: 0 12px;
+}
+
+.line {
+  border-top: 1px solid black;
+  flex: 1;
+}
+.register {
+  color: white;
+  height: 40px;
+  width: 230px;
+  border-radius: 5px;
+  background-color: black;
+  border: none;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+.image {
+  height: 670px;
+  width: 680px;
+  border-radius: 5px;
+  object-fit: cover;
+}
+.logo {
+  margin-top: 30px;
+  height: 200px;
+  width: 190px;
+}
+
+/* SIGNUP */
+.cow {
+  width: 33.33%;
+  height: 630px;
+}
+.signup-form {
+  margin-left: 30px;
+}
+.cont {
+  display: flex;
+}
+.input-user-pass {
+  display: flex;
+  flex-direction: row;
+}
+h3 {
+  margin-top: 10px;
+  font-size: 30px;
+  color: #444444;
+  margin-bottom: 10px;
+  font-weight: 700;
+  line-height: 35px;
+}
+.text-input {
+  margin-right: 20px;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  height: 35px;
+  width: 380px;
+  margin-bottom: 30px;
+}
+.email-input {
+  height: 35px;
+  border-radius: 5px;
+  border: 1px solid lightgray;
+}
+.col {
+  display: flex;
+  flex-direction: column;
+}
+label {
+  font-weight: 800;
+  margin-bottom: 5px;
+}
+#open-select-label {
+  margin-top: 20px;
+  color: black;
+}
+.select {
+  width: 300px;
+  border-radius: 5px;
+  border: 1px solid lightgray;
+}
+.city-input {
+  margin-bottom: 10px;
+}
+.year-picker {
+  margin-left: 60px;
+  height: 33px;
+}
+.are {
+  margin-left: 60px;
+}
+.conditions {
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+.agree {
+  background-color: #7c4ec4;
+  padding: 5px;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+.update {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.but-signup {
+  background-color: #7c4ec4;
+  font-size: 15px;
+  color: white;
+  border-radius: 5px;
+  border: none;
+  padding: 10px;
+}
+.row {
+  display: flex;
+  flex-direction: row;
+}
+input[type="radio"].demo2 {
+  display: none;
+}
+input[type="radio"].demo2 + label {
+  padding: 0.5rem;
+  font-size: 15px;
+  border-radius: 0.3rem;
+  color: lightgray;
+  border: 1px solid transparent;
+  transition: all 0.15s ease-in-out;
+}
+input[type="radio"].demo2.demoyes:hover + label {
+  background-color: #7c4ec4;
+}
+input[type="radio"].demo2.demoyes:checked + label {
+  background-color: #7c4ec4;
+}
+.check {
+  margin-top: 18px;
+}
+.sell {
+  font-size: 10px;
+}
+/* HEADER */
+body nav {
+  position: sticky;
+  top: 0;
+}
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 8px 0;
+  margin: auto;
+}
+
+.header-container > div:first-child,
+.header-logo {
+  cursor: pointer;
+}
+.header-logo {
+  height: 35px;
+  margin-left: 10px;
+}
+
+.deco-button {
+  background-color: #fff;
+  color: #9069cd;
+  margin-bottom: 15px;
+}
+.button-signup {
+  margin-right: 20px;
+}
+.button-login-signup {
+  background-color: #9069cd;
+  color: white;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-right: 10px;
+}
+.header-button {
+  height: 42px;
+  width: 85px;
+  border: 1px solid #9069cd;
+  border-radius: 5px;
+
+  font-size: 12px;
+  outline: none;
+}
+
+.menu {
+  color: black;
+  margin-right: 4px;
+}
+.icon-header {
+  color: #9069cd;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.sepa {
+  border: 2px solid #9069cd;
+}
+
+/* FOOTER */
+.footer {
+  text-align: center;
+  background-color: #9069cd;
+}
+.footer img {
+  height: 40px;
+  margin-top: 5px;
+  margin-left: 30px;
+  margin-right: 30px;
+}
