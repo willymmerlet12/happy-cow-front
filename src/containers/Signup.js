@@ -13,7 +13,7 @@ const Signup = ({ setUser }) => {
   const [open, setOpen] = React.useState(false);
 
   const handleChange = (event) => {
-    setVegan(event.target.value);
+    setVegStatus(event.target.value);
   };
 
   const handleClose = () => {
@@ -40,7 +40,7 @@ const Signup = ({ setUser }) => {
   const [secure, setSecure] = useState(true);
   const [location, setLocation] = useState("");
   const [birth, setBirth] = useState([]);
-  const [vegan, setVegan] = useState([]);
+  const [vegStatus, setVegStatus] = useState([]);
 
   const formData = new FormData();
   formData.append("username", username);
@@ -48,7 +48,7 @@ const Signup = ({ setUser }) => {
   formData.append("password", password);
   formData.append("location", location);
   formData.append("birth", birth);
-  formData.append("vegStatus", vegan);
+  formData.append("vegStatus", vegStatus);
 
   const history = useHistory();
 
@@ -141,7 +141,7 @@ const Signup = ({ setUser }) => {
                   open={open}
                   onClose={handleClose}
                   onOpen={handleOpen}
-                  value={vegan}
+                  value={vegStatus}
                   onChange={handleChange}
                 >
                   {names.map((veg) => (
