@@ -15,11 +15,11 @@ const Header = ({ token, setUser }) => {
           </div>
           <Link className="icon-header">
             <p className="menu">Restaurants & stores</p>
-            <FontAwesomeIcon icon="angle-double-down" />
+            <FontAwesomeIcon icon="angle-double-down" className="icon" />
           </Link>
           <Link className="icon-header">
             <p className="menu">Feed The Cow</p>
-            <FontAwesomeIcon icon="angle-double-down" />
+            <FontAwesomeIcon icon="angle-double-down" className="icon" />
           </Link>
           {token ? (
             <button

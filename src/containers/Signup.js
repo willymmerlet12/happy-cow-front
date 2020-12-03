@@ -3,14 +3,11 @@ import axios from "axios";
 import { useHistory, Link } from "react-router-dom";
 import cow from "../img/cow.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { makeStyles } from "@material-ui/core/styles";
-import InputLabel from "@material-ui/core/InputLabel";
-import MenuItem from "@material-ui/core/MenuItem";
-import Select from "@material-ui/core/Select";
+import { Select, MenuItem } from "@material-ui/core";
 import YearPicker from "react-year-picker";
 
 const Signup = ({ setUser }) => {
-  const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = useState(false);
 
   const handleChange = (event) => {
     setVegStatus(event.target.value);
@@ -39,7 +36,7 @@ const Signup = ({ setUser }) => {
   const [password, setPassword] = useState("");
   const [secure, setSecure] = useState(true);
   const [location, setLocation] = useState("");
-  const [birth, setBirth] = useState([]);
+  const [dateOfBirth, setDateOfBirth] = useState([]);
   const [vegStatus, setVegStatus] = useState([]);
 
   const formData = new FormData();
@@ -47,7 +44,7 @@ const Signup = ({ setUser }) => {
   formData.append("email", email);
   formData.append("password", password);
   formData.append("location", location);
-  formData.append("birth", birth);
+  formData.append("birth", dateOfBirth);
   formData.append("vegStatus", vegStatus);
 
   const history = useHistory();
@@ -136,8 +133,6 @@ const Signup = ({ setUser }) => {
                 <label id="open-select-label">VegStatus</label>
                 <Select
                   className="select"
-                  labelId="open-select-label"
-                  id="open-select"
                   open={open}
                   onClose={handleClose}
                   onOpen={handleOpen}
@@ -155,7 +150,7 @@ const Signup = ({ setUser }) => {
                 <label id="open-select-label" className="are">
                   Birth Year
                 </label>
-                <YearPicker className="year-picker" />
+                <YearPicker className="year-picker" value={dateOfBirth} />
               </div>
             </div>
             <label id="open-select-label">Your home city</label>

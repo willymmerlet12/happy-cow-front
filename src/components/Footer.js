@@ -10,7 +10,7 @@ const Footer = () => {
         <a href="https://www.youtube.com/watch?v=EgT_us6AsDg"> &nbsp; 🤍</a>
         &nbsp; With <a href="org">&nbsp; React</a>
         &nbsp; by <a href="https://github.com/willymmerlet12">&nbsp; Will</a>
-        <img src={Cow} alt="" />
+        <img id="coww" src={Cow} alt="" />
       </div>
     </div>
   );
