@@ -325,6 +325,9 @@ body nav {
 .hero-img {
   height: 300px;
   width: 100%;
+  background-image: fixed;
+  position: relative;
+  background-size: cover;
 }
 
 .resto {
@@ -352,6 +355,7 @@ body nav {
   width: 200px;
   padding-bottom: 10px;
   border: 2px solid #fbba55;
+  border-radius: 5px;
   margin-bottom: 10px;
   margin-right: 90px;
 }
@@ -372,6 +376,7 @@ body nav {
   width: 400px;
   padding-bottom: 10px;
   border: 2px solid #9069cd;
+  border-radius: 5px;
   margin-bottom: 10px;
 }
 .but-news {
@@ -385,6 +390,7 @@ body nav {
 }
 .address {
   color: lightgrey;
+  margin-bottom: 5px;
 }
 .logo-veg {
   height: 20px;
@@ -403,6 +409,12 @@ body nav {
 .carousel1 {
   outline: none;
 }
-.rest-cont:-webkit-scrollbar {
+.carousel-container:-webkit-scrollbar {
+  display: none;
+}
+.h3-home {
+  margin-top: 50px;
+}
+.control-arrow {
   display: none;
 }

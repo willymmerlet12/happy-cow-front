@@ -1,11 +1,19 @@
 import React, { useState, useEffect } from "react";
 import Loader from "react-loader-spinner";
 import data from "../assets/restaurants.json";
-import Banane from "../img/banane.jpg";
+import Donut from "../img/donut.jpg";
 import Insta from "../img/nsta-logo.png";
 import Face from "../img/face.png";
 import Vegan from "../img/vegan.svg";
 import NoVeg from "../img/no-veg.svg";
+import VegStore from "../img/veg-store.svg";
+import Vegetarian from "../img/vegetarian.svg";
+import Delivery from "../img/delivery.svg";
+import Bakery from "../img/bakery.svg";
+import HealthStore from "../img/health-store.svg";
+import Pro from "../img/professional.svg";
+import IceCream from "../img/ice-cream.svg";
+import Other from "../img/other.svg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Carousel } from "react-responsive-carousel";
 
@@ -17,6 +25,31 @@ const Home = ({ isLoading, setIsLoading }) => {
   const cold = data.filter(
     (item) => item.category === 3 || item.category === 1
   );
+
+  const DisplayRightImg = (type) => {
+    // params type === restau so type.type = restau.type
+    if (type.type === "veg-options") {
+      return NoVeg;
+    } else if (type.type === "vegan") {
+      return Vegan;
+    } else if (type.type === "Veg Store") {
+      return VegStore;
+    } else if (type.type === "vegetarian") {
+      return Vegetarian;
+    } else if (type.type === "delivery") {
+      return Delivery;
+    } else if (type.type === "other") {
+      return Other;
+    } else if (type.type === "bakery") {
+      return Bakery;
+    } else if (type.type === "Health Store") {
+      return HealthStore;
+    } else if (type.type === "Professional") {
+      return Pro;
+    } else if (type.type === "Ice Cream") {
+      return IceCream;
+    }
+  };
 
   const responsive = {
     desktop: {
@@ -35,13 +68,6 @@ const Home = ({ isLoading, setIsLoading }) => {
       paritialVisibilityGutter: 30,
     },
   };
-  const settings = {
-    dots: true,
-    infinite: false,
-    speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 3,
-  };
 
   return isLoading ? (
     <Loader
@@ -54,9 +80,9 @@ const Home = ({ isLoading, setIsLoading }) => {
     />
   ) : (
     <div>
-      <img className="hero-img" src={Banane} alt="pp" />
+      <img className="hero-img" src={Donut} alt="pp" />
       <div className="rest-cont">
-        <h3>Vegan places around you</h3>
+        <h3 className="h3-home">Vegan places around you</h3>
         <Carousel
           className="carousel1"
           containerClass="carousel-container"
@@ -64,6 +90,8 @@ const Home = ({ isLoading, setIsLoading }) => {
           responsive={responsive}
           showArrows={false}
           showStatus={false}
+          showIndicators={false}
+          showThumbs={false}
         >
           <div className="row">
             {result.map((rest, i) => {
@@ -80,8 +108,8 @@ const Home = ({ isLoading, setIsLoading }) => {
 
                       <img
                         className="logo-veg"
-                        src={rest.vegOnly === 1 ? Vegan : NoVeg}
-                        alt="Logo vegan"
+                        src={DisplayRightImg(rest)}
+                        alt=""
                       />
                     </div>
                     <p className="address">
@@ -139,8 +167,8 @@ const Home = ({ isLoading, setIsLoading }) => {
                       <p className="title-resto">{rest.name}</p>
                       <img
                         className="logo-veg"
-                        src={rest.vegOnly === 1 ? Vegan : NoVeg}
-                        alt="Logo vegan"
+                        src={DisplayRightImg(rest)}
+                        alt=""
                       />
                     </div>
                     <p className="address">
@@ -195,8 +223,8 @@ const Home = ({ isLoading, setIsLoading }) => {
                       <p className="title-resto">{rest.name}</p>
                       <img
                         className="logo-veg"
-                        src={rest.vegOnly === 1 ? Vegan : NoVeg}
-                        alt="Logo vegan"
+                        src={DisplayRightImg(rest)}
+                        alt=""
                       />
                     </div>
                     <p className="address">
