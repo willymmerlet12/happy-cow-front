@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import Loader from "react-loader-spinner";
 import data from "../assets/restaurants.json";
 import Donut from "../img/donut.jpg";
@@ -17,7 +18,8 @@ import Other from "../img/other.svg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Carousel } from "react-responsive-carousel";
 
-const Home = ({ isLoading, setIsLoading }) => {
+const Home = () => {
+  const [isLoading, setIsLoading] = useState(true);
   const result = data.filter((item) => item.category === 0);
 
   const shop = data.filter((item) => item.category === 2);
@@ -69,16 +71,7 @@ const Home = ({ isLoading, setIsLoading }) => {
     },
   };
 
-  return isLoading ? (
-    <Loader
-      type="Rings"
-      color="#00BFFF"
-      height={100}
-      width={100}
-      timeout={3000}
-      className="loader"
-    />
-  ) : (
+  return (
     <div>
       <img className="hero-img" src={Donut} alt="pp" />
       <div className="rest-cont">
@@ -98,44 +91,49 @@ const Home = ({ isLoading, setIsLoading }) => {
               if (rest.pictures[0]) {
                 return (
                   <div>
-                    <div>
-                      {rest.pictures[0] && (
-                        <img className="resto" src={rest.pictures[0]} alt="" />
-                      )}
-                    </div>
-                    <div className="row">
-                      <p className="title-resto">{rest.name}</p>
+                    <Link rest to={`/restaurant/${rest.placeId}`}>
+                      <div>
+                        {rest.pictures[0] && (
+                          <img
+                            className="resto"
+                            src={rest.pictures[0]}
+                            alt=""
+                          />
+                        )}
+                      </div>
+                      <div className="row">
+                        <p className="title-resto">{rest.name}</p>
 
-                      <img
-                        className="logo-veg"
-                        src={DisplayRightImg(rest)}
-                        alt=""
+                        <img
+                          className="logo-veg"
+                          src={DisplayRightImg(rest)}
+                          alt=""
+                        />
+                      </div>
+                      <p className="address">
+                        {rest.address && rest.address.slice(-20, -6)}
+                      </p>
+                      <FontAwesomeIcon
+                        icon="star"
+                        color={rest.rating > 0 ? "#fbb30c" : "lightgrey"}
                       />
-                    </div>
-                    <p className="address">
-                      {rest.address && rest.address.slice(-20, -6)}
-                    </p>
-                    <FontAwesomeIcon
-                      icon="star"
-                      color={rest.rating > 0 ? "#fbb30c" : "lightgrey"}
-                    />
-                    <FontAwesomeIcon
-                      icon="star"
-                      color={rest.rating > 1 ? "#fbb30c" : "lightgrey"}
-                    />
-                    <FontAwesomeIcon
-                      icon="star"
-                      color={rest.rating > 2 ? "#fbb30c" : "lightgrey"}
-                    />
-                    <FontAwesomeIcon
-                      icon="star"
-                      color={rest.rating > 3 ? "#fbb30c" : "lightgrey"}
-                    />
-                    <FontAwesomeIcon
-                      icon="star"
-                      color={rest.rating > 4 ? "#fbb30c" : "lightgrey"}
-                    />
-
+                      <FontAwesomeIcon
+                        icon="star"
+                        color={rest.rating > 1 ? "#fbb30c" : "lightgrey"}
+                      />
+                      <FontAwesomeIcon
+                        icon="star"
+                        color={rest.rating > 2 ? "#fbb30c" : "lightgrey"}
+                      />
+                      <FontAwesomeIcon
+                        icon="star"
+                        color={rest.rating > 3 ? "#fbb30c" : "lightgrey"}
+                      />
+                      <FontAwesomeIcon
+                        icon="star"
+                        color={rest.rating > 4 ? "#fbb30c" : "lightgrey"}
+                      />
+                    </Link>
                     <p className="description">
                       {rest.description &&
                         rest.description.slice(0, 110) + "..."}
@@ -160,40 +158,42 @@ const Home = ({ isLoading, setIsLoading }) => {
               if (i < 10) {
                 return (
                   <div>
-                    {rest.pictures[0] && (
-                      <img className="resto" src={rest.pictures[0]} alt="" />
-                    )}
-                    <div className="row">
-                      <p className="title-resto">{rest.name}</p>
-                      <img
-                        className="logo-veg"
-                        src={DisplayRightImg(rest)}
-                        alt=""
+                    <Link rest to={`/restaurant/${rest.placeId}`}>
+                      {rest.pictures[0] && (
+                        <img className="resto" src={rest.pictures[0]} alt="" />
+                      )}
+                      <div className="row">
+                        <p className="title-resto">{rest.name}</p>
+                        <img
+                          className="logo-veg"
+                          src={DisplayRightImg(rest)}
+                          alt=""
+                        />
+                      </div>
+                      <p className="address">
+                        {rest.address && rest.address.slice(-20, -6)}
+                      </p>
+                      <FontAwesomeIcon
+                        icon="star"
+                        color={rest.rating > 0 ? "#fbb30c" : "lightgrey"}
                       />
-                    </div>
-                    <p className="address">
-                      {rest.address && rest.address.slice(-20, -6)}
-                    </p>
-                    <FontAwesomeIcon
-                      icon="star"
-                      color={rest.rating > 0 ? "#fbb30c" : "lightgrey"}
-                    />
-                    <FontAwesomeIcon
-                      icon="star"
-                      color={rest.rating > 1 ? "#fbb30c" : "lightgrey"}
-                    />
-                    <FontAwesomeIcon
-                      icon="star"
-                      color={rest.rating > 2 ? "#fbb30c" : "lightgrey"}
-                    />
-                    <FontAwesomeIcon
-                      icon="star"
-                      color={rest.rating > 3 ? "#fbb30c" : "lightgrey"}
-                    />
-                    <FontAwesomeIcon
-                      icon="star"
-                      color={rest.rating > 4 ? "#fbb30c" : "lightgrey"}
-                    />
+                      <FontAwesomeIcon
+                        icon="star"
+                        color={rest.rating > 1 ? "#fbb30c" : "lightgrey"}
+                      />
+                      <FontAwesomeIcon
+                        icon="star"
+                        color={rest.rating > 2 ? "#fbb30c" : "lightgrey"}
+                      />
+                      <FontAwesomeIcon
+                        icon="star"
+                        color={rest.rating > 3 ? "#fbb30c" : "lightgrey"}
+                      />
+                      <FontAwesomeIcon
+                        icon="star"
+                        color={rest.rating > 4 ? "#fbb30c" : "lightgrey"}
+                      />
+                    </Link>
                     <p className="description">
                       {rest.description &&
                         rest.description.slice(0, 110) + "..."}
@@ -216,41 +216,43 @@ const Home = ({ isLoading, setIsLoading }) => {
               if (rest.pictures[0]) {
                 return (
                   <div>
-                    {rest.pictures[0] && (
-                      <img className="resto" src={rest.pictures[0]} alt="" />
-                    )}
-                    <div className="row">
-                      <p className="title-resto">{rest.name}</p>
-                      <img
-                        className="logo-veg"
-                        src={DisplayRightImg(rest)}
-                        alt=""
-                      />
-                    </div>
-                    <p className="address">
-                      {rest.address && rest.address.slice(-20, -6)}
-                    </p>
+                    <Link rest to={`/restaurant/${rest.placeId}`}>
+                      {rest.pictures[0] && (
+                        <img className="resto" src={rest.pictures[0]} alt="" />
+                      )}
+                      <div className="row">
+                        <p className="title-resto">{rest.name}</p>
+                        <img
+                          className="logo-veg"
+                          src={DisplayRightImg(rest)}
+                          alt=""
+                        />
+                      </div>
+                      <p className="address">
+                        {rest.address && rest.address.slice(-20, -6)}
+                      </p>
 
-                    <FontAwesomeIcon
-                      icon="star"
-                      color={rest.rating > 0 ? "#fbb30c" : "lightgrey"}
-                    />
-                    <FontAwesomeIcon
-                      icon="star"
-                      color={rest.rating > 1 ? "#fbb30c" : "lightgrey"}
-                    />
-                    <FontAwesomeIcon
-                      icon="star"
-                      color={rest.rating > 2 ? "#fbb30c" : "lightgrey"}
-                    />
-                    <FontAwesomeIcon
-                      icon="star"
-                      color={rest.rating > 3 ? "#fbb30c" : "lightgrey"}
-                    />
-                    <FontAwesomeIcon
-                      icon="star"
-                      color={rest.rating > 4 ? "#fbb30c" : "lightgrey"}
-                    />
+                      <FontAwesomeIcon
+                        icon="star"
+                        color={rest.rating > 0 ? "#fbb30c" : "lightgrey"}
+                      />
+                      <FontAwesomeIcon
+                        icon="star"
+                        color={rest.rating > 1 ? "#fbb30c" : "lightgrey"}
+                      />
+                      <FontAwesomeIcon
+                        icon="star"
+                        color={rest.rating > 2 ? "#fbb30c" : "lightgrey"}
+                      />
+                      <FontAwesomeIcon
+                        icon="star"
+                        color={rest.rating > 3 ? "#fbb30c" : "lightgrey"}
+                      />
+                      <FontAwesomeIcon
+                        icon="star"
+                        color={rest.rating > 4 ? "#fbb30c" : "lightgrey"}
+                      />
+                    </Link>
                     <p className="description">
                       {rest.description &&
                         rest.description.slice(0, 110) + "..."}

@@ -418,3 +418,87 @@ body nav {
 .control-arrow {
   display: none;
 }
+
+/* DETAILS */
+.resto-cont {
+  width: 1080px;
+  margin: auto;
+}
+.detail-bordure {
+  padding: 30px;
+}
+.reso-title {
+  color: white;
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.veg-stat {
+  color: green;
+}
+.veg {
+  background-color: white;
+  padding: 3px;
+  border-radius: 5px;
+  margin-right: 5px;
+}
+.address-id {
+  margin-top: 7px;
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+.clock {
+  font-size: 30px;
+  margin-top: 10px;
+  margin-right: 5px;
+}
+.description1 {
+  font-size: 18px;
+  padding: 2px;
+  line-height: 25px;
+  width: 20%;
+  margin-bottom: 5px;
+  color: grey;
+}
+.contact {
+  position: absolute;
+  right: 60%;
+}
+.cont {
+  position: absolute;
+  right: 30%;
+}
+.column1 {
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  line-height: 2;
+}
+.phone {
+  color: grey;
+}
+.h3-detail {
+  font-size: 25px;
+}
+.dess {
+  width: 80%;
+  line-height: 25px;
+}
+.carousel-details {
+  width: 70%;
+  margin-bottom: 20px;
+}
+.resto1 {
+  margin-top: 10px;
+  margin-right: 20px;
+  height: 220px;
+  width: 220px;
+  border-radius: 10px;
+}
+.map {
+  position: absolute;
+  top: 22%;
+  right: 5%;
+  height: 300px;
+  width: 300px;
+}

@@ -12,21 +12,34 @@ import Cookie from "js-cookie";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Home from "./containers/Home";
+import Details from "./containers/Details";
 
 import { library } from "@fortawesome/fontawesome-svg-core";
 import {
-  faSearch,
   faAngleDoubleDown,
   faEyeSlash,
   faEye,
   faStar,
+  faHome,
+  faClock,
+  faPhone,
+  faMapMarker,
 } from "@fortawesome/free-solid-svg-icons";
 
-library.add(faAngleDoubleDown, faEye, faEyeSlash, faStar);
+library.add(
+  faAngleDoubleDown,
+  faEye,
+  faEyeSlash,
+  faStar,
+  faHome,
+  faClock,
+  faPhone,
+  faMapMarker
+);
 
 function App() {
   const [token, setToken] = useState(Cookie.get("userToken") || null);
-  const [isLoading, setIsLoading] = useState(true);
+
   const setUser = (tokenToSet) => {
     if (tokenToSet) {
       Cookie.set("userToken", tokenToSet);
@@ -45,6 +58,9 @@ function App() {
         </Route>
         <Route path="/login">
           <Login setUser={setUser} />
+        </Route>
+        <Route path="/restaurant/:id">
+          <Details />
         </Route>
         <Route path="/">
           <Home />
