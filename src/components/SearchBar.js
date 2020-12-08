@@ -147,7 +147,6 @@ const SearchBar = () => {
               </>
             );
           }
-          <Pagination itemsCountPerPage={10} totalItemsCount={100} />;
         })}
       </div>
     </div>
