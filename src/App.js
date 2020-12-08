@@ -13,6 +13,8 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Home from "./containers/Home";
 import Details from "./containers/Details";
+import NewsLetter from "./containers/NewsLetter";
+import SearchBar from "./components/SearchBar";
 
 import { library } from "@fortawesome/fontawesome-svg-core";
 import {
@@ -24,6 +26,8 @@ import {
   faClock,
   faPhone,
   faMapMarker,
+  faDollarSign,
+  faSearch,
 } from "@fortawesome/free-solid-svg-icons";
 
 library.add(
@@ -34,7 +38,9 @@ library.add(
   faHome,
   faClock,
   faPhone,
-  faMapMarker
+  faMapMarker,
+  faDollarSign,
+  faSearch
 );
 
 function App() {
@@ -53,6 +59,9 @@ function App() {
     <Router>
       <Header token={token} setUser={setUser} />
       <Switch>
+        <Route path="/newsletter">
+          <NewsLetter />
+        </Route>
         <Route path="/signup">
           <Signup setUser={setUser} />
         </Route>
@@ -61,6 +70,9 @@ function App() {
         </Route>
         <Route path="/restaurant/:id">
           <Details />
+        </Route>
+        <Route path="/result/:search">
+          <SearchBar />
         </Route>
         <Route path="/">
           <Home />

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import Loader from "react-loader-spinner";
 import data from "../assets/restaurants.json";
 import Donut from "../img/donut.jpg";
@@ -70,9 +70,35 @@ const Home = () => {
       paritialVisibilityGutter: 30,
     },
   };
+  const [search, setSearch] = useState("");
+  let history = useHistory();
 
   return (
     <div>
+      <div>
+        <h1 className="vegan-title">Find Vegan Restaurant Nearby</h1>
+        <form
+          className="input-search"
+          onSubmit={(event) => {
+            event.preventDefault();
+            history.push("/result/" + search);
+          }}
+        >
+          <input
+            className="search-bar"
+            type="text"
+            value={search}
+            placeholder="Search for city, region, or zipcode"
+            onChange={(event) => {
+              const value = event.target.value;
+              setSearch(value);
+            }}
+          />
+          <button className="bar" type="submit">
+            <FontAwesomeIcon icon="search" className="search-i" />
+          </button>
+        </form>
+      </div>
       <img className="hero-img" src={Donut} alt="pp" />
       <div className="rest-cont">
         <h3 className="h3-home">Vegan places around you</h3>
@@ -282,7 +308,10 @@ const Home = () => {
               Monthly updates on vegan news, worldwide restaurant and travel
               highlights, and giveaways!
             </p>
-            <button className="but-news">Sign Up</button>
+
+            <button className="but-news">
+              <Link to="/newsletter">Sign Up</Link>
+            </button>
           </div>
         </div>
       </div>

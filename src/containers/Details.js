@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Loader from "react-loader-spinner";
 import DATA from "../assets/restaurants.json";
 import { useParams } from "react-router-dom";
+import Face from "../img/face.png";
 import Vegan from "../img/vegan.svg";
 import NoVeg from "../img/no-veg.svg";
 import VegStore from "../img/veg-store.svg";
@@ -21,8 +22,32 @@ const Details = () => {
   const [data, setData] = useState({});
 
   const AnyReactComponent = () => (
-    <FontAwesomeIcon icon="map-marker" className="mapMarker" />
+    <FontAwesomeIcon icon="map-marker" className="map1" />
   );
+
+  const DisplayRightColor = (type) => {
+    if (
+      type.type === "vegan" ||
+      type.type === "Veg Store" ||
+      type.type === "delivery"
+    ) {
+      return "green";
+    } else if (type.type === "veg-options") {
+      return "#dc5d5b";
+    } else if (type.type === "vegetarian") {
+      return "#8a2091";
+    } else if (type.type === "Bakery") {
+      return "#9c732a";
+    } else if (type.type === "Other") {
+      return "lightblue";
+    } else if (type.type === "Market Vendor") {
+      return "blue";
+    } else if (type.type === "Juice Bar") {
+      return "orange";
+    } else if (type.type === "Health Store") {
+      return "#b49a07";
+    }
+  };
 
   useEffect(() => {
     const fetchData = () => {
@@ -68,7 +93,7 @@ const Details = () => {
       return Delivery;
     } else if (type.type === "other") {
       return Other;
-    } else if (type.type === "bakery") {
+    } else if (type.type === "Bakery") {
       return Bakery;
     } else if (type.type === "Health Store") {
       return HealthStore;
@@ -81,13 +106,21 @@ const Details = () => {
 
   return data ? (
     <div>
-      <div className="detail-bordure">
+      <div
+        className="detail-bordure"
+        style={{ backgroundColor: DisplayRightColor(data) }}
+      >
         <div className="resto-cont">
           <p className="reso-title">{data.name}</p>
           <div className="row">
             <div className="row veg">
               <img className="logo-veg" src={DisplayRightImg(data)} alt="" />
-              <p className="veg-stat">{data.type}</p>
+              <p
+                style={{ color: DisplayRightColor(data) }}
+                className="veg-stat"
+              >
+                {data.type}
+              </p>
             </div>
             <FontAwesomeIcon
               icon="star"
@@ -142,21 +175,6 @@ const Details = () => {
             </div>
             <p className="phone">{data.address}</p>
           </div>
-          <div className="map">
-            <GoogleMapReact
-              bootstrapURLKeys={{
-                key: "AIzaSyC8CQvxh5dCiTA_nacJwrGlgQpZQi4CUBM",
-              }}
-              defaultCenter={{ lat: 59.955413, lng: 30.337844 }}
-              defaultZoom={11}
-            >
-              <AnyReactComponent
-                lat={59.955413}
-                lng={30.337844}
-                text={data.name}
-              />
-            </GoogleMapReact>
-          </div>
         </div>
         <p className="dess">
           {data.description && data.description.split("Open")[0]}
@@ -189,6 +207,45 @@ const Details = () => {
             )}
           </div>
         </Carousel>
+        <div className="map">
+          <GoogleMapReact
+            bootstrapURLKeys={{
+              key: "AIzaSyC8CQvxh5dCiTA_nacJwrGlgQpZQi4CUBM",
+            }}
+            defaultCenter={{
+              lat: data.location && data.location.lat,
+              lng: data.location && data.location.lng,
+            }}
+            defaultZoom={11}
+          >
+            <AnyReactComponent
+              lat={data.location && data.location.lat}
+              lng={data.location && data.location.lng}
+              text={data.name}
+            />
+          </GoogleMapReact>
+        </div>
+      </div>
+      <div className="column1 post">
+        <div className="row ">
+          {data.website && <p className="website">Website:</p>}
+          <a>{data.website}</a>
+        </div>
+
+        <a href={data.facebook && data.facebook}>
+          <img src={Face} className="face " alt="" />
+        </a>
+
+        <div className="row">
+          <p className="website">Price:</p>
+          <FontAwesomeIcon
+            className="dollar"
+            icon="dollar-sign"
+            color={data.price === "null" ? "black" : "yellow"}
+          />
+          <FontAwesomeIcon className="dollar" icon="dollar-sign" />
+          <FontAwesomeIcon className="dollar" icon="dollar-sign" />
+        </div>
       </div>
     </div>
   ) : (
