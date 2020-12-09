@@ -4,7 +4,7 @@
   height: 350px;
   width: 100%;
   background-image: fixed;
-  /*  position: relative; */
+  /* position: relative; */
   background-size: cover;
 }
 .input-search {
@@ -134,7 +134,42 @@
   display: none;
 }
 .wave {
+  background-image: url("../../assets/svg.svg");
   position: absolute;
-  left: 0%;
-  top: 15%;
+  background-position-y: 0%;
+}
+@media (max-width: 1280px) {
+  .vegan-title {
+    font-size: 32px;
+  }
+  .search-bar {
+    width: 500px;
+  }
+  .carousel1 {
+    width: 80%;
+    margin-left: 10px;
+  }
+}
+@media (max-width: 780px) {
+  .carousel1 {
+    width: 90%;
+  }
+  .search-bar {
+    width: 400px;
+  }
+}
+@media (max-width: 600px) {
+  .vegan-title {
+    margin-left: 70px;
+    font-size: 20px;
+  }
+  .search-bar {
+    width: 350px;
+  }
+  .hero-img {
+    width: 100%;
+  }
+  .carousel1 {
+    width: 300px;
+  }
 }

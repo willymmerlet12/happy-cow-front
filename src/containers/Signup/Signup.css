@@ -111,3 +111,27 @@ input[type="radio"].demo2.demoyes:checked + label {
 .sell {
   font-size: 10px;
 }
+@media (max-width: 1280px) {
+  .text-input {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media (max-width: 600px) {
+  .text-input {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  input {
+    width: 200px;
+  }
+  .but-signup {
+    margin-bottom: 20px;
+    margin-right: 10px;
+  }
+  .conditions,
+  .update {
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,32 @@
+/* NEWSLETTER */
+.mooz {
+  width: 23%;
+  margin-top: 40px;
+  margin-left: 40px;
+}
+.input-news {
+  width: 80%;
+  height: 38px;
+
+  margin-left: 20px;
+  border: 1px solid lightgrey;
+  border-radius: 5px;
+}
+.input-col {
+  display: flex;
+  flex-direction: column;
+}
+.button-news {
+  color: white;
+  background-color: #9069cd;
+  border: none;
+  border-radius: 5px;
+  width: 200px;
+  height: 40px;
+  margin-left: 20px;
+  margin-top: 20px;
+  outline: none;
+}
+.button-news:hover {
+  cursor: pointer;
+}

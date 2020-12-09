@@ -23,3 +23,15 @@
   margin-left: 400px;
   width: 800px;
 }
+@media (max-width: 1280px) {
+  .container-result {
+    margin-left: 100px;
+  }
+}
+@media (max-width: 600px) {
+  .container-result {
+    display: flex;
+    flex-direction: column;
+    margin-left: none;
+  }
+}

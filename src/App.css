@@ -18,23 +18,13 @@ body {
   .header-container .icon {
     display: none;
   }
-
-  .carousel1 {
-    width: 90%;
-  }
-  .search-bar {
-    width: 400px;
-  }
 }
 
 @media (max-width: 1280px) {
   /* .cow {
     display: none;
   } */
-  .wave {
-    position: absolute;
-    top: 30%;
-  }
+
   .container-result {
     margin-left: 100px;
   }
@@ -58,16 +48,7 @@ body {
   .h3-home {
     margin-left: 10px;
   }
-  .vegan-title {
-    font-size: 32px;
-  }
-  .search-bar {
-    width: 600px;
-  }
-  .carousel1 {
-    width: 80%;
-    margin-left: 10px;
-  }
+
   .carousel-details {
     width: 60%;
   }

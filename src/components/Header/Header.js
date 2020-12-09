@@ -14,10 +14,7 @@ const Header = ({ token, setUser }) => {
               <img className="header-logo" src={Logo} alt="logo" />
             </Link>
           </div>
-          <Link className="icon-header">
-            <p className="menu">Restaurants & stores</p>
-            <FontAwesomeIcon icon="angle-double-down" className="icon" />
-          </Link>
+
           <Link to="/feedthecow" className="icon-header">
             <p className="menu">Feed The Cow</p>
           </Link>
