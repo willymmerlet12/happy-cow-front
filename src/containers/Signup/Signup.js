@@ -48,7 +48,7 @@ const Signup = ({ setUser }) => {
   formData.append("location", location);
   formData.append("birth", dateOfBirth);
   formData.append("vegStatus", vegStatus);
-
+  let i;
   const history = useHistory();
 
   const handleSubmit = async (event) => {
@@ -56,7 +56,7 @@ const Signup = ({ setUser }) => {
       event.preventDefault();
       if (username && email && password) {
         const response = await axios.post(
-          "https://happy-cow-replica.herokuapp.com/signup",
+          "https://happy-cow-replica.herokuapp.com/user/signup",
           formData
         );
         console.log(response.data);
