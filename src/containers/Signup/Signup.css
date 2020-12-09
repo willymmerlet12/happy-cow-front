@@ -51,6 +51,9 @@ label {
   border-radius: 5px;
   border: 1px solid lightgray;
 }
+.deco-button {
+  margin-right: 100px;
+}
 .city-input {
   margin-bottom: 10px;
 }

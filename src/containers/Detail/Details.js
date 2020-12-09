@@ -180,34 +180,36 @@ const Details = () => {
         <p className="dess">
           {data.description && data.description.split("Open")[0]}
         </p>
-        <Carousel
-          className="carousel-details"
-          containerClass="carousel-container"
-          itemClass="carousel-item"
-          responsive={responsive}
-          showArrows={false}
-          showStatus={false}
-          showIndicators={false}
-          showThumbs={false}
-        >
-          <div className="row">
-            {data.pictures && (
-              <img className="resto1" src={data.pictures[0]} alt="" />
-            )}
-            {data.pictures && (
-              <img className="resto1" src={data.pictures[1]} alt="" />
-            )}
-            {data.pictures && (
-              <img className="resto1" src={data.pictures[2]} alt="" />
-            )}
-            {data.pictures && (
-              <img className="resto1" src={data.pictures[3]} alt="" />
-            )}
-            {data.pictures && (
-              <img className="resto1" src={data.pictures[4]} alt="" />
-            )}
-          </div>
-        </Carousel>
+        <div>
+          <Carousel
+            className="carousel-details"
+            containerClass="carousel-container"
+            itemClass="carousel-item"
+            responsive={responsive}
+            showArrows={false}
+            showStatus={false}
+            showIndicators={false}
+            showThumbs={false}
+          >
+            <div className="row">
+              {data.pictures && (
+                <img className="resto1" src={data.pictures[0]} alt="" />
+              )}
+              {data.pictures && (
+                <img className="resto1" src={data.pictures[1]} alt="" />
+              )}
+              {data.pictures && (
+                <img className="resto1" src={data.pictures[2]} alt="" />
+              )}
+              {data.pictures && (
+                <img className="resto1" src={data.pictures[3]} alt="" />
+              )}
+              {data.pictures && (
+                <img className="resto1" src={data.pictures[4]} alt="" />
+              )}
+            </div>
+          </Carousel>
+        </div>
         <div className="map">
           <GoogleMapReact
             bootstrapURLKeys={{

@@ -38,7 +38,7 @@
   cursor: pointer;
   border-radius: 7px;
   position: absolute;
-  top: 1%;
+  top: -1%;
   right: 0%;
   outline: none;
 }
@@ -133,10 +133,9 @@
 .control-arrow {
   display: none;
 }
-.wave {
+.wavee {
+  width: 100%;
   background-image: url("../../assets/svg.svg");
-  position: absolute;
-  background-position-y: 0%;
 }
 @media (max-width: 1280px) {
   .vegan-title {

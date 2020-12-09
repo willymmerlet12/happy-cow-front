@@ -77,28 +77,30 @@ const Home = () => {
   return (
     <div>
       <div>
-        <h1 className="vegan-title">Find Vegan Restaurant Nearby</h1>
-        <form
-          className="input-search"
-          onSubmit={(event) => {
-            event.preventDefault();
-            history.push("/result/" + search);
-          }}
-        >
-          <input
-            className="search-bar"
-            type="text"
-            value={search}
-            placeholder="Search for city, region, or zipcode"
-            onChange={(event) => {
-              const value = event.target.value;
-              setSearch(value);
+        <div className="wavee">
+          <h1 className="vegan-title">Find Vegan Restaurant Nearby</h1>
+          <form
+            className="input-search"
+            onSubmit={(event) => {
+              event.preventDefault();
+              history.push("/result/" + search);
             }}
-          />
-          <button className="bar" type="submit">
-            <FontAwesomeIcon icon="search" className="search-i" />
-          </button>
-        </form>
+          >
+            <input
+              className="search-bar"
+              type="text"
+              value={search}
+              placeholder="Search for city, region, or zipcode"
+              onChange={(event) => {
+                const value = event.target.value;
+                setSearch(value);
+              }}
+            />
+            <button className="bar" type="submit">
+              <FontAwesomeIcon icon="search" className="search-i" />
+            </button>
+          </form>
+        </div>
       </div>
       <img className="hero-img" src={Donut} alt="pp" />
 

@@ -24,91 +24,12 @@ body {
   /* .cow {
     display: none;
   } */
-
-  .container-result {
-    margin-left: 100px;
-  }
-  .text-input {
-    display: flex;
-    flex-direction: column;
-  }
-  input {
-    width: 200px;
-  }
-  .map {
-    margin-left: 40px;
-    width: 600px;
-  }
-  .post {
-    display: none;
-  }
-  .dess {
-    width: 60%;
-  }
-  .h3-home {
-    margin-left: 10px;
-  }
-
-  .carousel-details {
-    width: 60%;
-  }
 }
 @media (max-width: 600px) {
-  .container-result {
-    display: flex;
-    flex-direction: column;
-    margin-left: none;
-  }
-  .text-input {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-  }
-  .vegan-title {
-    font-size: 25px;
-  }
-  .search-bar {
-    width: 300px;
-  }
-  .hero-img {
-    width: 100%;
-  }
-  .but-signup {
-    margin-bottom: 20px;
-  }
-  .conditions,
-  .update {
-    font-size: 14px;
-  }
   #coww {
     display: none;
   }
-  .dess {
-    margin-left: 5px;
-    width: 40%;
-  }
-  .map {
-    margin-left: 40px;
-    width: 400px;
-  }
-  .carousel1 {
-    width: 300px;
-  }
-  .carousel-details {
-    margin-left: 10px;
-    width: 440px;
-  }
-  .contact {
-    position: absolute;
-    right: 2%;
-  }
-  .h3-detail {
-    font-size: 15px;
-  }
-  .cont {
-    position: absolute;
-    right: 43%;
-  }
+
   .insta,
   .text-insta,
   .news {
@@ -116,10 +37,5 @@ body {
   }
   .footer img {
     margin-left: none;
-  }
-  .column1,
-  .description1 {
-    font-size: 15px;
-    line-height: 1;
   }
 }
