@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import Logo from "../img/logo.svg";
+import Logo from "../../img/logo.svg";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import "./Header.css";
 
 const Header = ({ token, setUser }) => {
   return (
@@ -17,9 +18,8 @@ const Header = ({ token, setUser }) => {
             <p className="menu">Restaurants & stores</p>
             <FontAwesomeIcon icon="angle-double-down" className="icon" />
           </Link>
-          <Link className="icon-header">
+          <Link to="/feedthecow" className="icon-header">
             <p className="menu">Feed The Cow</p>
-            <FontAwesomeIcon icon="angle-double-down" className="icon" />
           </Link>
           {token ? (
             <button

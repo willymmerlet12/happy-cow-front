@@ -1,5 +1,6 @@
 import React from "react";
-import Cow from "../img/cooww.gif";
+import Cow from "../../img/cooww.gif";
+import "./Footer.css";
 
 const Footer = () => {
   return (

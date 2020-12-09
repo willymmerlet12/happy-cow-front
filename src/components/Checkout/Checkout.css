@@ -1,0 +1,25 @@
+/* SEARCH PAGE */
+
+.titre-search {
+  text-align: center;
+}
+.title-search {
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 5px;
+  color: black;
+}
+
+.pic-sea {
+  width: 200px;
+  margin-right: 20px;
+  margin-top: 10px;
+  border-radius: 5px;
+}
+.container-result {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  margin-left: 400px;
+  width: 800px;
+}

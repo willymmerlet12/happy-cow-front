@@ -1,18 +1,18 @@
 import React, { useState } from "react";
 import { useParams, Link, useHistory } from "react-router-dom";
-import data from "../assets/restaurants.json";
-import Vegan from "../img/vegan.svg";
-import NoVeg from "../img/no-veg.svg";
-import VegStore from "../img/veg-store.svg";
-import Vegetarian from "../img/vegetarian.svg";
-import Delivery from "../img/delivery.svg";
-import Bakery from "../img/bakery.svg";
-import HealthStore from "../img/health-store.svg";
-import Pro from "../img/professional.svg";
-import IceCream from "../img/ice-cream.svg";
-import Other from "../img/other.svg";
+import data from "../../assets/restaurants.json";
+import Vegan from "../../img/vegan.svg";
+import NoVeg from "../../img/no-veg.svg";
+import VegStore from "../../img/veg-store.svg";
+import Vegetarian from "../../img/vegetarian.svg";
+import Delivery from "../../img/delivery.svg";
+import Bakery from "../../img/bakery.svg";
+import HealthStore from "../../img/health-store.svg";
+import Pro from "../../img/professional.svg";
+import IceCream from "../../img/ice-cream.svg";
+import Other from "../../img/other.svg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import Pagination from "react-js-pagination";
+import "./SearchBar.css";
 
 const SearchBar = () => {
   let history = useHistory();
@@ -78,10 +78,18 @@ const SearchBar = () => {
       return "#b49a07";
     }
   };
+  const limit = 100;
+  const [pageMax, setPageMax] = useState(0);
+  const [page, setPage] = useState(1);
+
+  const handleClickPage = (event) => {
+    console.log(event);
+    setPage(event.selected + 1);
+  };
 
   return (
     <div>
-      <h3 className="titre-search">Results of your search</h3>
+      <h3 className="titre-search">Results of : {search}</h3>
 
       <div className="container-result">
         {res.map((resu, i) => {

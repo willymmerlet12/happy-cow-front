@@ -1,21 +1,22 @@
 import React, { useState, useEffect } from "react";
 import Loader from "react-loader-spinner";
-import DATA from "../assets/restaurants.json";
+import DATA from "../../assets/restaurants.json";
 import { useParams } from "react-router-dom";
-import Face from "../img/face.png";
-import Vegan from "../img/vegan.svg";
-import NoVeg from "../img/no-veg.svg";
-import VegStore from "../img/veg-store.svg";
-import Vegetarian from "../img/vegetarian.svg";
-import Delivery from "../img/delivery.svg";
-import Bakery from "../img/bakery.svg";
-import HealthStore from "../img/health-store.svg";
-import Pro from "../img/professional.svg";
-import IceCream from "../img/ice-cream.svg";
-import Other from "../img/other.svg";
+import Face from "../../img/face.png";
+import Vegan from "../../img/vegan.svg";
+import NoVeg from "../../img/no-veg.svg";
+import VegStore from "../../img/veg-store.svg";
+import Vegetarian from "../../img/vegetarian.svg";
+import Delivery from "../../img/delivery.svg";
+import Bakery from "../../img/bakery.svg";
+import HealthStore from "../../img/health-store.svg";
+import Pro from "../../img/professional.svg";
+import IceCream from "../../img/ice-cream.svg";
+import Other from "../../img/other.svg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import GoogleMapReact from "google-map-react";
 import { Carousel } from "react-responsive-carousel";
+import "./Details.css";
 
 const Details = () => {
   const { id } = useParams();

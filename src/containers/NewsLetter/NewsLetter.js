@@ -1,7 +1,11 @@
 import React from "react";
-import Mooz from "../img/moozine.png";
+import Mooz from "../../img/moozine.png";
+import "./NewsLetter.css";
 
 const NewsLetter = () => {
+  const handleClick = () => {
+    alert("You have subscribed to the newsletter!!");
+  };
   return (
     <div className="row">
       <img className="mooz" src={Mooz} alt="" />
@@ -92,7 +96,9 @@ const NewsLetter = () => {
               I don't agree
             </label>
           </div>
-          <button className="button-news">Subscribe to Moozine</button>
+          <button onClick={handleClick} className="button-news">
+            Subscribe to Moozine
+          </button>
         </div>
       </div>
     </div>

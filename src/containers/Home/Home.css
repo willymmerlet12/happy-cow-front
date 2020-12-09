@@ -1,0 +1,140 @@
+/* HOME */
+
+.hero-img {
+  height: 350px;
+  width: 100%;
+  background-image: fixed;
+  /*  position: relative; */
+  background-size: cover;
+}
+.input-search {
+  position: absolute;
+  top: 20%;
+  right: 20%;
+}
+.carousel-status {
+  display: none;
+}
+.vegan-title {
+  position: absolute;
+  top: 15%;
+  right: 30%;
+  color: white;
+  font-size: 35px;
+  font-weight: 700;
+}
+.search-bar {
+  height: 40px;
+  width: 800px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+}
+.bar {
+  border: none;
+  background-color: #9069cd;
+  padding-right: 10px;
+  height: 44px;
+  cursor: pointer;
+  border-radius: 7px;
+  position: absolute;
+  top: 1%;
+  right: 0%;
+  outline: none;
+}
+.search-i {
+  color: white;
+  font-size: 15px;
+}
+.resto {
+  margin-top: 10px;
+  margin-right: 20px;
+  height: 220px;
+  width: 300px;
+  border-radius: 10px;
+}
+.rest-cont {
+  width: 1280px;
+  margin: auto;
+}
+.title-resto {
+  margin-top: 5px;
+  color: #4caf50;
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+.desc-resto {
+  flex-shrink: 1;
+}
+.insta {
+  font-size: 25px;
+  width: 200px;
+  padding-bottom: 10px;
+  border: 2px solid #fbba55;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  margin-right: 90px;
+}
+.text-insta {
+  line-height: 2;
+  text-align: center;
+  color: black;
+}
+.logo-insta {
+  height: 50px;
+  margin-left: 60px;
+}
+.border-face {
+  border: 2px solid blue;
+}
+.news {
+  font-size: 18px;
+  width: 400px;
+  padding-bottom: 10px;
+  border: 2px solid #9069cd;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+.but-news {
+  background-color: #9069cd;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 10px;
+  margin-left: 150px;
+  color: white;
+}
+.address {
+  color: lightgrey;
+  margin-bottom: 5px;
+}
+.logo-veg {
+  height: 20px;
+}
+.carousel-container {
+  width: 100%;
+}
+.carousel {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: scroll;
+}
+.description {
+  line-height: 1.6;
+}
+.carousel1 {
+  outline: none;
+  width: 100%;
+}
+.carousel-container:-webkit-scrollbar {
+  display: none;
+}
+
+.control-arrow {
+  display: none;
+}
+.wave {
+  position: absolute;
+  left: 0%;
+  top: 15%;
+}

@@ -6,15 +6,16 @@ import {
   Route,
   Redirect,
 } from "react-router-dom";
-import Login from "./containers/Login";
-import Signup from "./containers/Signup";
+import Login from "./containers/Login/Login";
+import Signup from "./containers/Signup/Signup";
 import Cookie from "js-cookie";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
-import Home from "./containers/Home";
-import Details from "./containers/Details";
-import NewsLetter from "./containers/NewsLetter";
-import SearchBar from "./components/SearchBar";
+import Header from "./components/Header/Header";
+import Footer from "./components/Footer/Footer";
+import Home from "./containers/Home/Home";
+import Details from "./containers/Detail/Details";
+import NewsLetter from "./containers/NewsLetter/NewsLetter";
+import SearchBar from "./components/SearchBar/SearchBar";
+import FeedTheCow from "./containers/Feed/FeedTheCow";
 
 import { library } from "@fortawesome/fontawesome-svg-core";
 import {
@@ -59,6 +60,9 @@ function App() {
     <Router>
       <Header token={token} setUser={setUser} />
       <Switch>
+        <Route path="/feedthecow">
+          <FeedTheCow />
+        </Route>
         <Route path="/newsletter">
           <NewsLetter />
         </Route>

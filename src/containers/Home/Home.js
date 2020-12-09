@@ -1,22 +1,23 @@
 import React, { useState, useEffect } from "react";
 import { Link, useHistory } from "react-router-dom";
 import Loader from "react-loader-spinner";
-import data from "../assets/restaurants.json";
-import Donut from "../img/donut.jpg";
-import Insta from "../img/nsta-logo.png";
-import Face from "../img/face.png";
-import Vegan from "../img/vegan.svg";
-import NoVeg from "../img/no-veg.svg";
-import VegStore from "../img/veg-store.svg";
-import Vegetarian from "../img/vegetarian.svg";
-import Delivery from "../img/delivery.svg";
-import Bakery from "../img/bakery.svg";
-import HealthStore from "../img/health-store.svg";
-import Pro from "../img/professional.svg";
-import IceCream from "../img/ice-cream.svg";
-import Other from "../img/other.svg";
+import data from "../../assets/restaurants.json";
+import Donut from "../../img/donut.jpg";
+import Insta from "../../img/nsta-logo.png";
+import Face from "../../img/face.png";
+import Vegan from "../../img/vegan.svg";
+import NoVeg from "../../img/no-veg.svg";
+import VegStore from "../../img/veg-store.svg";
+import Vegetarian from "../../img/vegetarian.svg";
+import Delivery from "../../img/delivery.svg";
+import Bakery from "../../img/bakery.svg";
+import HealthStore from "../../img/health-store.svg";
+import Pro from "../../img/professional.svg";
+import IceCream from "../../img/ice-cream.svg";
+import Other from "../../img/other.svg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Carousel } from "react-responsive-carousel";
+import "./Home.css";
 
 const Home = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -100,8 +101,11 @@ const Home = () => {
         </form>
       </div>
       <img className="hero-img" src={Donut} alt="pp" />
+
       <div className="rest-cont">
-        <h3 className="h3-home">Vegan places around you</h3>
+        <h3 className="h3-home" style={{ marginTop: "120px" }}>
+          Vegan places around you
+        </h3>
         <Carousel
           className="carousel1"
           containerClass="carousel-container"
@@ -315,6 +319,18 @@ const Home = () => {
           </div>
         </div>
       </div>
+      <svg
+        className="wave"
+        style={{}}
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 1440 320"
+      >
+        <path
+          fill="#ffffff"
+          fill-opacity="1"
+          d="M0,288L30,256C60,224,120,160,180,160C240,160,300,224,360,240C420,256,480,224,540,229.3C600,235,660,277,720,282.7C780,288,840,256,900,250.7C960,245,1020,267,1080,266.7C1140,267,1200,245,1260,218.7C1320,192,1380,160,1410,144L1440,128L1440,320L1410,320C1380,320,1320,320,1260,320C1200,320,1140,320,1080,320C1020,320,960,320,900,320C840,320,780,320,720,320C660,320,600,320,540,320C480,320,420,320,360,320C300,320,240,320,180,320C120,320,60,320,30,320L0,320Z"
+        ></path>
+      </svg>
     </div>
   );
 };

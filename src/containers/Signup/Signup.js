@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { useHistory, Link } from "react-router-dom";
-import cow from "../img/cow.jpg";
+import cow from "../../img/cow.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Select, MenuItem } from "@material-ui/core";
 import YearPicker from "react-year-picker";
-import Vegs from "../img/vegs.jpg";
+import Vegs from "../../img/vegs.jpg";
+import "./Signup.css";
 
 const Signup = ({ setUser }) => {
   const [open, setOpen] = useState(false);
@@ -175,7 +176,9 @@ const Signup = ({ setUser }) => {
               id="demo2-a"
               checked
             />
-            <label for="demo2-a">I agree</label>
+            <label style={{ marginLeft: "20px" }} for="demo2-a">
+              I agree
+            </label>
             <input
               type="radio"
               name="demo2"
