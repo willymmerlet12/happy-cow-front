@@ -79,6 +79,7 @@ label {
   margin-bottom: 20px;
 }
 .but-signup {
+  outline: none;
   background-color: #7c4ec4;
   font-size: 15px;
   color: white;

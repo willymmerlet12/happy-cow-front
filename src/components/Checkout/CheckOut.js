@@ -18,11 +18,14 @@ const Checkout = ({ price, name }) => {
 
       const stripeToken = stripeResponse.token.id;
 
-      const response = await axios.post("http://localhost:3100/payment", {
-        stripeToken: stripeToken,
-        amount: price,
-        title: name,
-      });
+      const response = await axios.post(
+        "https://happy-cow-back.herokuapp.com/payment",
+        {
+          stripeToken: stripeToken,
+          amount: price,
+          title: name,
+        }
+      );
       if (response.data.status === "succeeded") {
         setSucceed(true);
       }

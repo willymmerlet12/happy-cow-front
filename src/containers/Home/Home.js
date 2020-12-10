@@ -178,7 +178,7 @@ const Home = () => {
             })}
           </div>
         </Carousel>
-        <h3>Vegan Produt, Spa, stores</h3>
+        <h3 className="h3-home">Vegan Produt, Spa, stores</h3>
         <Carousel
           className="carousel1"
           containerClass="carousel-container"
@@ -236,7 +236,7 @@ const Home = () => {
             })}
           </div>
         </Carousel>
-        <h3>Vegan stores aound you</h3>
+        <h3 className="h3-home">Vegan stores aound you</h3>
         <Carousel
           className="carousel1"
           containerClass="carousel-container"
@@ -295,7 +295,7 @@ const Home = () => {
             })}
           </div>
         </Carousel>
-        <h3>Get our newsletter</h3>
+        <h3 className="h3-home">Get our newsletter</h3>
         <div className="row">
           <a href="https://www.instagram.com/happycow/">
             <div className="insta">

@@ -35,6 +35,7 @@ body nav {
   margin-top: 5px;
   margin-bottom: 5px;
   margin-right: 10px;
+  cursor: pointer;
 }
 .header-button {
   height: 42px;
