@@ -56,7 +56,7 @@ const Signup = ({ setUser }) => {
       event.preventDefault();
       if (username && email && password) {
         const response = await axios.post(
-          "https://happy-cow-back.herokuapp.com//user/signup",
+          "https://happy-cow-back.herokuapp.com/user/signup",
           formData
         );
         console.log(response.data);
