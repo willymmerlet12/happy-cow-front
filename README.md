@@ -1,6 +1,7 @@
 # happy-cow-front
 
 Replica of the website happy-cow for the vegan comunity.
+![ ](https://j.gifs.com/NLMkRK.gif)
 
 ## Installation
 
