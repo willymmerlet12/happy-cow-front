@@ -17,7 +17,7 @@
 }
 .vegan-title {
   position: absolute;
-  top: 15%;
+  top: 13%;
   right: 30%;
   color: white;
   font-size: 35px;
@@ -104,6 +104,7 @@
   margin-top: 10px;
   margin-left: 150px;
   color: white;
+  outline: none;
 }
 .address {
   color: lightgrey;
