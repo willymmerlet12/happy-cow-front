@@ -2,7 +2,7 @@
 
 Replica of the website happy-cow for the vegan comunity.
 
-https://gifs.com/gif/happy-cow-NLMkRK
+https://j.gifs.com/NLMkRK.gif
 
 ## Installation
 
