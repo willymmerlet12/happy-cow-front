@@ -46,7 +46,9 @@ const Checkout = ({ price, name }) => {
           <div className="pay-card">
             <CardElement />
           </div>
-          <button type="submit">Valider</button>
+          <button type="submit" placeholder="Validation">
+            Valider
+          </button>
         </form>
       )}
     </>
